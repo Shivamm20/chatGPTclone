@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import {
     Box,
@@ -16,7 +15,6 @@ import {
 
 const Summary = () => {
     const theme = useTheme();
-    const navigate = useNavigate();
     //media
     const isNotMobile = useMediaQuery("(min-width: 1000px)");
     // states
@@ -122,7 +120,7 @@ const Summary = () => {
                             lineHeight: "450px",
                         }}
                     >
-                        Summary Will Apprea Here
+                        Summary Will Appear Here
                     </Typography>
                 </Card>
             )}

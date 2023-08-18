@@ -26,7 +26,7 @@ exports.registerContoller = async (req, res, next) => {
         if (exisitingEmail) {
             return next(new errorResponse("Email is already register", 500));
         }
-        const user = await userModel({ username, email, password });
+        const user = await userModel.create({ username, email, password });
         this.sendToken(user, 201, res);
         // res.status(200).send({ msg: "Registration Successful!" })
     } catch (error) {
